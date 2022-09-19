@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 116.75, "left": 49.96, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht", "top": 244.29, "left": -108.83, "attrs": {} },
+    { "type": "wokwi-microsd-card", "id": "sd1", "top": 18.22, "left": -143.09, "attrs": {} }
+  ],
+  "connections": [
+    [ "dht:VCC", "uno:5V", "red", [ "v54.98", "h314.18", "v-59.67", "h-9.47" ] ],
+    [ "dht:GND", "uno:GND.2", "black", [ "v33.2", "h288.49", "v-89.03", "h-8.52" ] ],
+    [ "dht:SDA", "uno:8", "green", [ "v75.82", "h445.75", "v-404.44", "h-138.29", "v-2.84" ] ],
+    [ "sd1:VCC", "uno:5V", "red", [ "h47.42", "v302.08", "h192.11" ] ],
+    [ "sd1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "sd1:CS", "uno:10", "blue", [ "h0" ] ],
+    [ "sd1:DI", "uno:11", "grey", [ "h263.83", "v20.17" ] ],
+    [ "sd1:SCK", "uno:13", "violet", [ "h0" ] ],
+    [ "sd1:DO", "uno:12", "orange", [ "h0" ] ]
+  ]
+}
