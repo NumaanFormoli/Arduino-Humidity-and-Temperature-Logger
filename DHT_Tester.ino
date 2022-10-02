@@ -1,20 +1,21 @@
-#include <SD.h>
+#include <SD.h> //necessary packages to connect logger
 #include "DHT.h"
 
 #define DHTPIN 8     
 #define DHTTYPE DHT22   
 
-long seconds=00;
+long seconds=00; // initializing for use
 long minutes=00;
 long hours=00;
 
 int CS_pin = 10;
 
 DHT dht(DHTPIN, DHTTYPE);
-File sd_file;
+File sd_file; // will hold the values recorded
 
 
 void setup()  {
+  //starts the arduino and logger
   Serial.begin(9600);
   pinMode(CS_pin, OUTPUT);
   dht.begin();
